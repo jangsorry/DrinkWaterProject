@@ -11,6 +11,8 @@ import TextFieldEffects
 class ProfileViewController: UIViewController {
 
     
+    @IBOutlet var NavigationBarItem2: UIBarButtonItem!
+   
     @IBOutlet var imageView: UIImageView!
     
     
@@ -24,9 +26,18 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UISetting()
 
-        self.navigationController?.navigationBar.tintColor = .white
+       
     }
     
+    func UISetting() {
+        
+        self.view.backgroundColor = UIColor(red: 0/255, green: 151/255, blue: 112/255, alpha: 0.7)
+        
+        
+        NavigationBarItem2.title = "저장"
+    }
 
 }

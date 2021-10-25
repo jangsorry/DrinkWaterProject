@@ -5,6 +5,13 @@
 //  Created by 지성 on 2021/10/12.
 //
 
+
+
+
+//앱의 생명주기를 고려해서 코드를 만드는 것이 어렵고, 코드 입력할 때 정확한 위치를 잘 모르겠음
+//여러 객체나 요소를 연결하는 부분에서 어려움을 느낌
+
+
 import UIKit
 
 class DrinkWaterViewController: UIViewController {
@@ -26,7 +33,7 @@ class DrinkWaterViewController: UIViewController {
     @IBOutlet var drinkButton: UIButton!
     
     
-    //!-- viewDidLoda 위치 --!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,7 +61,7 @@ class DrinkWaterViewController: UIViewController {
         textLabel.numberOfLines = 2
         textLabel.text = "잘하셨어요!\n오늘 마신 양은"
         textLabel.textColor = .white
-        textLabel.font = .systemFont(ofSize: 20)
+        textLabel.font = .systemFont(ofSize: 24)
         textLabel.textAlignment = .left
         
         totalLabel.numberOfLines = 1
@@ -80,20 +87,25 @@ class DrinkWaterViewController: UIViewController {
         unitLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         unitLabel.textColor = .white
         
+        infoLabel.font = .systemFont(ofSize: 14)
+        infoLabel.textColor = .white
         
-        //하단 UI
+        //하단 UI 버튼
         drinkButton.setTitle("물마시기", for: .normal)
+        drinkButton.contentVerticalAlignment = .center
+        drinkButton.titleLabel?.font = .systemFont(ofSize: 20)
         drinkButton.contentVerticalAlignment = .top
-        drinkButton.backgroundColor = .white
         drinkButton.tintColor = .black
+        drinkButton.backgroundColor = .white
+        
         
     }
     
     
     func waterdata() {
-        percentLabel.text = "목표의 xx%"
-        totalLabel.text = "총량ml"
-        infoLabel.text = "xxx님의 하루 물 권장 섭취량은 xxxL 입니다."
+        percentLabel.text = "목표의 50%"
+        totalLabel.text = "500ml"
+        infoLabel.text = "안녕하세요님의 하루 물 권장 섭취량은 100L 입니다."
         
         
     }

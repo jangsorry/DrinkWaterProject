@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o9-6Z-1Cc">
-                                <rect key="frame" x="0.0" y="788" width="414" height="74"/>
+                                <rect key="frame" x="0.0" y="788" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -162,8 +162,11 @@
                             <constraint firstItem="zea-ld-iqQ" firstAttribute="trailing" secondItem="ZYX-Pj-RaI" secondAttribute="trailing" constant="107" id="oIV-9A-7wI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AL3-ra-5hU"/>
+                    <navigationItem key="navigationItem" id="AL3-ra-5hU">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="oxY-1E-pSx"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="NavigationBarItem2" destination="oxY-1E-pSx" id="Ycu-BG-d3I"/>
                         <outlet property="heightTextField" destination="c39-cc-Pc9" id="YUL-TM-O3G"/>
                         <outlet property="imageView" destination="ZYX-Pj-RaI" id="i7Z-Be-LqW"/>
                         <outlet property="nicknameTextField" destination="E3g-iK-659" id="8uD-wW-SFn"/>
@@ -193,6 +196,17 @@
             <point key="canvasLocation" x="1118.840579710145" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="4V9-jo-8jb">
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
+        </designable>
+        <designable name="E3g-iK-659">
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
+        </designable>
+        <designable name="c39-cc-Pc9">
+            <size key="intrinsicContentSize" width="4" height="18.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="1-1" width="152" height="151"/>
         <systemColor name="systemBackgroundColor">
