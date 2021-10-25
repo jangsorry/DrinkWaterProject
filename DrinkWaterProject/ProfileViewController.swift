@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var weighTextField: HoshiTextField!
         
     
+    //텍스트필드는 userDefault로 저장한다음, 값을 가져오면 될 거 같고, 그 다음에 해당정보를 앞에 넘겨줘야할 듯..
     
     
     
@@ -35,7 +36,6 @@ class ProfileViewController: UIViewController {
     func UISetting() {
         
         self.view.backgroundColor = UIColor(red: 0/255, green: 151/255, blue: 112/255, alpha: 0.7)
-        
         
         NavigationBarItem2.title = "저장"
     }
