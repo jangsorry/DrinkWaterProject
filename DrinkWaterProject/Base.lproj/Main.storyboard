@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ux-Co-78J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ux-Co-78J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,6 +29,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="drinkButtonClicked:" destination="Zfs-Wl-ynO" eventType="touchUpInside" id="pnF-f1-r5A"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6g-ZL-ACo">
                                 <rect key="frame" x="20" y="110" width="215" height="24"/>
@@ -74,6 +77,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HzK-37-Wg4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="HHB-t1-u5p" firstAttribute="centerY" secondItem="CFO-sM-0Vs" secondAttribute="centerY" id="7i6-H4-psK"/>
                             <constraint firstItem="HHB-t1-u5p" firstAttribute="centerX" secondItem="CFO-sM-0Vs" secondAttribute="centerX" id="LNK-Wo-vd1"/>
@@ -82,9 +86,16 @@
                             <constraint firstItem="HzK-37-Wg4" firstAttribute="trailing" secondItem="HHB-t1-u5p" secondAttribute="trailing" constant="77" id="hzg-HD-4W3"/>
                             <constraint firstItem="HHB-t1-u5p" firstAttribute="top" secondItem="HzK-37-Wg4" secondAttribute="top" constant="230" id="vRL-L1-V0d"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jso-nR-kYD" appends="YES" id="2oL-GP-sWQ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="dnM-EH-gfP">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="KMR-YE-zDt"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="KMR-YE-zDt">
+                            <connections>
+                                <action selector="resetButtonClicked:" destination="Zfs-Wl-ynO" id="4ff-B9-Koo"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Lbp-tB-4Xs">
                             <connections>
                                 <segue destination="gzW-pT-IUe" kind="show" id="opM-dc-i5C"/>
@@ -105,6 +116,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Y1-9b-aYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jso-nR-kYD">
+                    <connections>
+                        <action selector="tapClicked:" destination="Zfs-Wl-ynO" id="rBP-2k-2CL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2028.985507246377" y="130.58035714285714"/>
         </scene>
@@ -152,6 +168,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zea-ld-iqQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="E3g-iK-659" firstAttribute="top" secondItem="ZYX-Pj-RaI" secondAttribute="bottom" constant="55" id="8k0-Wz-kQ2"/>
                             <constraint firstItem="ZYX-Pj-RaI" firstAttribute="leading" secondItem="zea-ld-iqQ" secondAttribute="leading" constant="107" id="Lz1-pK-unB"/>
@@ -161,9 +178,16 @@
                             <constraint firstItem="ZYX-Pj-RaI" firstAttribute="top" secondItem="zea-ld-iqQ" secondAttribute="top" constant="124" id="mlk-Jp-dBK"/>
                             <constraint firstItem="zea-ld-iqQ" firstAttribute="trailing" secondItem="ZYX-Pj-RaI" secondAttribute="trailing" constant="107" id="oIV-9A-7wI"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="FIn-ud-ypt" appends="YES" id="pki-ZU-u7V"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="AL3-ra-5hU">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="oxY-1E-pSx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="oxY-1E-pSx">
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="gzW-pT-IUe" id="117-ps-UjM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="NavigationBarItem2" destination="oxY-1E-pSx" id="Ycu-BG-d3I"/>
@@ -174,6 +198,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6e-7V-8ZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FIn-ud-ypt">
+                    <connections>
+                        <action selector="tapClicked:" destination="gzW-pT-IUe" id="QJX-Gr-Q4e"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2842.0289855072465" y="130.58035714285714"/>
         </scene>
